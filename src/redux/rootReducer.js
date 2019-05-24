@@ -15,7 +15,7 @@ function rootReducer(state = INITIAL_STATE, action) {
   switch (type) {
     // init
     case 'UPDATE_STATE': {
-      return { ...state, ...action.state }
+      return (state = { ...state, ...action.state })
     }
     default:
       break
